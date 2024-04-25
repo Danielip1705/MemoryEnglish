@@ -1,3 +1,5 @@
+package memorygame;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -122,7 +124,7 @@ public class Main {
 	}
 
 	/**
-	 * Function that will show the rules of the games
+	 * Function that will show the rules of the game
 	 */
 	public static void welcome() {
 		System.out.println("WELCOME TO THE MEMORY GAME!");

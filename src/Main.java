@@ -26,7 +26,7 @@ public class Main {
 		// Second column selected by the player
 		int secondColumn;
 
-		// 
+		// Activates the function welcome thats shows the welcome and the rules
 		welcome();
 
 		// While the difficulty is not easy, medium, or hard
@@ -134,7 +134,8 @@ public class Main {
 		System.out.println("\t\tEasy: Size board 4x4");
 		System.out.println("\t\tMedium: Size board 6x6");
 		System.out.println("\t\tHard: Size board 8x8");
-		System.out.println("\t-Select the number of the row and later of the column to discover the number of the choose position");
+		System.out.println(
+				"\t-Select the number of the row and later of the column to discover the number of the choose position");
 		System.out.println("\t-If you descover two diferents numbers, they will be hidden again");
 		System.out.println("\t-If they are equals, the numbers selecteds will always be displayed");
 		System.out.println("\t-The game will be end when you discover all the couples of numbers");

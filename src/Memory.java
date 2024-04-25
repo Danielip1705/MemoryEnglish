@@ -39,13 +39,13 @@ public class Memory {
 	}
 
 	/**
-	 * Function thats initializate all the atributes, assigning the correspondent
-	 * values accordint to the choosen difficulty
+	 * Function thats initialises all the fields, assigning the corresponding
+	 * values according to the chosen difficulty
 	 * 
-	 * @param difficulty Difficulty choosen by the User
+	 * @param difficulty Difficulty chosen by the User
 	 */
 	public static void initialize(String difficulty) {
-		// Accordint to the Difficulty's value
+		// According to the Difficulty's value
 		switch (difficulty) {
 		// if the value is "easy"
 		case "easy":
@@ -65,40 +65,36 @@ public class Memory {
 
 		}
 
-		// Inicializate the two boards with the size of the assigned board
+		// Inicialises the two boards with the size of the assigned board
 		solution = new int[board][board];
 		gameBoard = new int[board][board];
 
 	}
 
 	/**
-	 * Function thats modificates the atribute "solucion", generating the couple of
-	 * numbers in aleatories positions, but it will not visible
+	 * Function that modifies the atribute "solution", generating the couple of
+	 * numbers in random positions, but it will not visible
 	 */
 	public static void generateSolution() {
 
-		// Creates a objets with the class random
+		// Creates an object with the class random
 		Random rand = new Random();
 
-		// Numero que ocupará un lugar en la tabla, inicializado en 1
-		// Number thats will ocupated the place on the board, inicializate in 1
+		// Number that will occupy the place on the board, inicializate in 1
 		int numFill = 1;
 
-		// Posición correspondiente a la fila generada aleatoriamente
-		// Corresponding position to the row inicializated aleatory
+		// Corresponding position to the row inicializated randomly
 		int row;
-		// Posición correspondiente a la columna generada aleatoriamente
 		// Corresponding position to the column inicializated aleatory
 		int column;
 
-		// Valor auxiliar para hacer los intercambios
-		// value auxiliar to do the exchanges
+		// auxiliary value  to do the exchanges
 		int aux;
 
-		// we fill the board solucion
-		// We go throught each row to the board solucion
+		// we fill the solution
+		// We go through each row to the board solucion
 		for (int i = 0; i < solution.length; i++) {
-			// We go thought each column to the board solucion
+			// We go through each column to the board solucion
 			for (int j = 0; j < solution[i].length; j++) {
 
 
@@ -201,11 +197,11 @@ public class Memory {
 	 * Function that modifies the game board, showing the position marked in the
 	 * parameter
 	 *
-	 * @param posicion Position of the table that will be visible
+	 * @param position Position of the table that will be visible
 	 */
 	public static void discoverBoxBoard(int row, int column) {
 
-		// The element of the game board will by equals to the element that is in the //
+		// The element of the game board will be equal to the element that is in the //
 		// same position in the solution table.
 		gameBoard[row][column] = solution[row][column];
 
@@ -255,13 +251,13 @@ public class Memory {
 
 		// Row counter
 		int i = 0;
-		// As long as the row counter is less than the number of rows on the gameboard
+		// As long as the row counter is less than the number of rows on the game board
 		// and the boolean is true
 		while (i < gameBoard.length && gameOver) {
 			// Row counter
 			int j = 0;
 			// As long as the column counter is less than the number of columns on the
-			// Gameboard and the boolean is true
+			// Game board and the boolean is true
 			while (j < gameBoard[i].length && gameOver) {
 				// If the number we are looking for is present on the Gameboard
 				if (gameBoard[i][j] == findNum) {

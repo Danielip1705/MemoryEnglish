@@ -161,7 +161,7 @@ public class Main {
 				System.out.println(petition);
 				// Assign the number entered by the user
 				number = sc.nextInt();
-				// If an exception occurs
+				// If an exception happen
 			} catch (InputMismatchException e) {
 				// Display this message
 				System.out.println("Only integers numbers are allowed");

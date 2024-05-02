@@ -128,7 +128,7 @@ public class Main {
 	 */
 	public static void welcome() {
 		System.out.println("WELCOME TO MEMORY GAME!");
-		System.out.println("---------------------------\n");
+		System.out.println("-----------------------\n");
 		System.out.println("RULES:");
 		System.out.println("-----");
 		System.out.println("\t-Find all the couples of numbers until complete the board game");

@@ -126,7 +126,7 @@ public class Main {
 	/**
 	 * Function that will show the rules of the game
 	 */
-	public static void welcome() {
+	private static void welcome() {
 		System.out.println("WELCOME TO MEMORY GAME!");
 		System.out.println("-----------------------\n");
 		System.out.println("RULES:");

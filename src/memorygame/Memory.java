@@ -18,14 +18,18 @@ public class Memory {
 	 */
 	private static int[][] gameBoard;
 
+
+	
 	/**
 	 * Function that return the value of field sizeBoard
 	 * 
 	 * @return Value of sizeBoard
 	 */
-	public static int getBoard() {
+	public static int getSizeBoard() {
 		return sizeBoard;
 	}
+
+
 
 	/**
 	 * Function that return the value of field gameBoard
@@ -203,7 +207,7 @@ public class Memory {
 	 *         not
 	 */
 	public static boolean checkCouple(int firstRow, int firstColumn, int secondRow, int secondColumn) {
-		// Variable that indicates if the numbers are equal
+		// Variable that indicates if the numbers are equals
 		boolean equals = true;
 
 		// If both discovered numbers are different
@@ -238,10 +242,10 @@ public class Memory {
 		// As long as the row counter is less than the number of rows on the game board
 		// and the boolean is true
 		while (i < gameBoard.length && gameOver) {
-			// Row counter
+			// Column counter
 			int j = 0;
 			// As long as the column counter is less than the number of columns on the
-			// Game board and the boolean is true
+			// game board and the boolean is true
 			while (j < gameBoard[i].length && gameOver) {
 				// If the number we are looking for is present on the Gameboard
 				if (gameBoard[i][j] == findNum) {
@@ -255,7 +259,7 @@ public class Memory {
 			i++;
 		}
 
-		// return the value of juegoTerminado
+		// Return the value of variable gameOver
 		return gameOver;
 
 	}

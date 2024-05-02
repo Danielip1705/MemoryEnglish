@@ -6,15 +6,15 @@ import java.util.Scanner;
 public class Main {
 
 	/**
-	 * Scanner activate
+	 * Scanner activated
 	 */
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
 
-		// Game board displayed on the screen
+		// Game board displayed on the console
 		int[][] boardGame;
-		// Difficulty selected by the user
+		// Difficulty selected by the player
 		String difficulty = "";
 		// Variable that determines if a pair of numbers are equal
 		boolean sameCouple;
@@ -58,10 +58,10 @@ public class Main {
 			Memory.showBoardGame();
 
 			do {
-				// Ask for the first row
-				firstRow = askNumeber("Choose a row");
-				// Ask for the first column
-				firstColumn = askNumeber("Choose a column");
+				// Ask for the row of the first number
+				firstRow = askNumber("Choose a row");
+				// Ask for the column of the first number
+				firstColumn = askNumber("Choose a column");
 
 				// If the chosen position corresponds to a number other than 0
 				if (boardGame[firstRow][firstColumn] != 0) {
@@ -84,10 +84,10 @@ public class Main {
 					.println("ROW " + firstRow + ", COLUMN " + firstColumn + " = " + boardGame[firstRow][firstColumn]);
 
 			do {
-				// Ask for the second row
-				secondRow = askNumeber("Choose a row");
-				// Ask for the first column
-				secondColumn = askNumeber("Choose a column");
+				// Ask for the row of the second number
+				secondRow = askNumber("Choose a row");
+				// Ask for the column of the second number
+				secondColumn = askNumber("Choose a column");
 
 				// If the chosen position corresponds to a number other than 0
 				if (boardGame[secondRow][secondColumn] != 0) {
@@ -127,18 +127,18 @@ public class Main {
 	 * Function that will show the rules of the game
 	 */
 	public static void welcome() {
-		System.out.println("WELCOME TO THE MEMORY GAME!");
+		System.out.println("WELCOME TO MEMORY GAME!");
 		System.out.println("---------------------------\n");
 		System.out.println("RULES:");
 		System.out.println("-----");
-		System.out.println("\t-Find all the couples of numbers to complete the board game");
+		System.out.println("\t-Find all the couples of numbers until complete the board game");
 		System.out.println("\t-There are 3 levels of difficulty that determinate the size of the board");
 		System.out.println("\t\tEasy: Size board 4x4");
 		System.out.println("\t\tMedium: Size board 6x6");
 		System.out.println("\t\tHard: Size board 8x8");
 		System.out.println(
 				"\t-Select the number of the row and later of the column to discover the number of the choose position");
-		System.out.println("\t-If you descover two diferents numbers, they will be hidden again");
+		System.out.println("\t-If you discover two diferents numbers, they will be hidden again");
 		System.out.println("\t-If they are equals, the numbers selecteds will always be displayed");
 		System.out.println("\t-The game will be end when you discover all the couples of numbers");
 		System.out.println("\t\tGOOD LUCK!\n");
@@ -150,7 +150,7 @@ public class Main {
 	 * @param petition Request message
 	 * @return Returns the value of the requested number
 	 */
-	private static int askNumeber(String petition) {
+	private static int askNumber(String petition) {
 
 		// Number to be returned by the function
 		int number = -1;
@@ -161,7 +161,7 @@ public class Main {
 				System.out.println(petition);
 				// Assign the number entered by the user
 				number = sc.nextInt();
-				// Assign the number entered by the user
+				// If an exception occurs
 			} catch (InputMismatchException e) {
 				// Display this message
 				System.out.println("Only integers numbers are allowed");
@@ -171,7 +171,7 @@ public class Main {
 			}
 			// While the number is not within the possible indices of the board, the
 			// instructions of the do will be repeated
-		} while (number < 0 || number >= Memory.getBoard());
+		} while (number < 0 || number >= Memory.getSizeBoard());
 
 		// Return the assigned number
 		return number;
